@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Ramiro Córdova\\\\OneDrive - G & C CONSULTORIA EM TI LTDA\\\\Cursos\\\\Claude\\\\financas\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Ramiro Córdova\\\\OneDrive - G & C CONSULTORIA EM TI LTDA\\\\Cursos\\\\Claude\\\\financas\" -Force | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Folder\"}else{\"File\"}}})",
+      "Bash(npm --version)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --no-eslint --use-npm)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Get-ChildItem \"C:\\\\\" -Directory -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name; Get-ChildItem \"C:\\\\Users\\\\Ramiro Córdova\\\\AppData\\\\Local\\\\\" -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"node|npm|bun|deno\" })",
+      "PowerShell(Head-Object *)",
+      "PowerShell(winget list *)",
+      "PowerShell(npm *)",
+      "PowerShell(winget install *)",
+      "PowerShell(npm install *)",
+      "PowerShell(npm run *)",
+      "PowerShell(Set-Location *)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"C:\\\\Users\\\\Ramiro Córdova\\\\OneDrive - G & C CONSULTORIA EM TI LTDA\\\\Cursos\\\\Claude\\\\financas\"; node \".\\\\node_modules\\\\next\\\\dist\\\\bin\\\\next\" dev 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 10 -UseBasicParsing; Write-Host \"Status: $\\($r.StatusCode\\)\"; Write-Host \\($r.Content.Substring\\(0, [Math]::Min\\(300, $r.Content.Length\\)\\)\\) } catch { Write-Host \"Erro: $_\" })",
+      "PowerShell(gh *)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"C:\\\\Users\\\\Ramiro Córdova\\\\OneDrive - G & C CONSULTORIA EM TI LTDA\\\\Cursos\\\\Claude\\\\financas\"; git status 2>&1)",
+      "PowerShell(git *)"
+    ]
+  }
+}
